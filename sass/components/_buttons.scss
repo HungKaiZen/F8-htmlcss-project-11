@@ -1,0 +1,58 @@
+@use "../abstracts";
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    padding: 12px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border-radius: 8px;
+    color: abstracts.$greenColor1;
+    border: 1px solid abstracts.$greenColor1;
+
+    &--small {
+        width: 157px;
+    }
+
+    &--medium {
+        width: 170px;
+    }
+
+    &--large {
+        width: 237px;
+    }
+
+    &--full {
+        width: 100%;
+    }
+
+    &--submit {
+        width: 100%;
+        color: abstracts.$textGreenColor;
+        background: abstracts.$yellowColor;
+
+        @include abstracts.screen(sm) {
+            width: 80%;
+        }
+
+        @include abstracts.screen(lg) {
+            width: min(157px, 100%);
+        }
+    }
+
+    &:hover {
+        color: abstracts.$textColorWhite;
+        background: abstracts.$buttonHoverColor;
+    }
+
+    &.active {
+        color: abstracts.$textColorWhite;
+        background: abstracts.$greenColor1;
+
+        &:hover {
+            color: abstracts.$textColorWhite;
+            background: abstracts.$buttonHoverColor;
+        }
+    }
+}

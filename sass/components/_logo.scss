@@ -1,0 +1,16 @@
+@use "../abstracts";
+.logo {
+    @include abstracts.flex-center;
+    column-gap: 8px;
+
+    &__text {
+        font-family: abstracts.$fontFamily;
+        font-size: 2rem;
+        font-weight: 700;
+        color: abstracts.$textColorWhite;
+
+        &--footer {
+            color: abstracts.$textColorDark;
+        }
+    }
+}

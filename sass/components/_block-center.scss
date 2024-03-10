@@ -1,0 +1,6 @@
+@use "../abstracts";
+.block-center {
+    @include abstracts.flex-center();
+    justify-content: center;
+    margin-top: 40px;
+}

@@ -1,0 +1,11 @@
+@use "../abstracts";
+.mobile-controls {
+    flex-wrap: nowrap;
+    overflow: hidden;
+    padding-bottom: 18px; // handle box-shadown when there is overflow: hidden
+    @include abstracts.screen(sm) {
+        flex-wrap: wrap;
+        overflow: visible;
+        padding-bottom: 0;
+    }
+}

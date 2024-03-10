@@ -1,0 +1,23 @@
+@use "../abstracts";
+.customer {
+    @include abstracts.flex-center();
+    gap: 13px;
+
+    &__avatar > img {
+        width: 46px;
+        border-radius: 50%;
+    }
+
+    &__info-title {
+        color: abstracts.$textColorDark;
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 1.75;
+    }
+
+    &__info-desc {
+        color: abstracts.$textLighterColor4;
+        font-size: 1.4rem;
+        line-height: 1.7;
+    }
+}

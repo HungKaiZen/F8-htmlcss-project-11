@@ -1,0 +1,5 @@
+@use "../abstracts";
+.star-group {
+    @include abstracts.flex-center();
+    gap: 5px;
+}

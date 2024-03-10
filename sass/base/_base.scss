@@ -1,0 +1,123 @@
+@use "../abstracts";
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Manrope", sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: inherit;
+    color: abstracts.$textColorDark;
+}
+
+h1,
+h2 {
+    font-weight: 700;
+    font-family: "Roboto Slab", serif;
+}
+
+input,
+textarea,
+select,
+button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+input,
+button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.heading {
+    max-width: 470px;
+    font-size: 4rem;
+    line-height: 1.375;
+    font-weight: 700;
+
+    @include abstracts.screen(lg) {
+        font-size: 5.8rem;
+        line-height: 1.17;
+    }
+}
+
+.comment {
+    color: abstracts.$textLighterColor3;
+    font-size: 1.4rem;
+    line-height: 1.7;
+}
+
+.see-more {
+    display: block;
+    margin-top: 24px;
+    color: abstracts.$textColorDark;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.icon {
+    filter: abstracts.$filterWhiteColor;
+}
+
+.icon-green-1 {
+    filter: abstracts.$filterGreenColor1;
+}
+
+.mt-4 {
+    margin-top: 4px;
+}
+
+.mt-18 {
+    margin-top: 18px;
+}
+
+.mt-12 {
+    margin-top: 12px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-26 {
+    margin-top: 26px;
+}
+
+.mt-36 {
+    margin-top: 36px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.pt-10 {
+    padding-top: 10px;
+}
+
+.pb-26 {
+    padding-bottom: 26px;
+}
+
+.position-1 {
+    position: relative;
+    bottom: -30px;
+}

@@ -1,0 +1,23 @@
+@use "../abstracts";
+.controls-group {
+    @include abstracts.flex-center();
+    gap: 20px;
+
+    &__btn {
+        @include abstracts.flex-center();
+        justify-content: center;
+        width: 70px;
+        height: 40px;
+        border-radius: 4px;
+        border: 1px solid abstracts.$greenColor1;
+        background: abstracts.$whiteColor;
+
+        &:hover {
+            background: abstracts.$greenColor1;
+        }
+
+        &:hover > img {
+            filter: abstracts.$filterWhiteColor;
+        }
+    }
+}

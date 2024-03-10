@@ -1,0 +1,53 @@
+@use "../abstracts";
+.added-wish-list {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include abstracts.flex-center();
+    width: 100%;
+    padding: 14px;
+    background: abstracts.$yellowColor;
+
+    &__title,
+    &__view-link {
+        color: abstracts.$textColorDark;
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.6;
+
+        @include abstracts.screen(md) {
+            font-size: 1.2rem;
+        }
+
+        @include abstracts.screen(lg) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__view-link {
+        display: inline-block;
+        margin-left: auto;
+        text-decoration: underline;
+        text-underline-offset: 6px;
+    }
+
+    &__btn-close {
+        margin-left: 34px;
+
+        @include abstracts.screen(md) {
+            margin-left: 10px;
+
+            > img {
+                width: 12px;
+            }
+        }
+
+        @include abstracts.screen(lg) {
+            margin-left: 24px;
+
+            > img {
+                width: 16px;
+            }
+        }
+    }
+}

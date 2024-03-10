@@ -1,0 +1,126 @@
+@use "../abstracts";
+
+.popular__title {
+    text-align: left;
+}
+
+.offer {
+    padding: 40px 0;
+    overflow: hidden;
+    &__inner {
+        padding: 24px 0;
+        rotate: -3deg;
+        background: abstracts.$darkColor;
+    }
+    &__list {
+        @include abstracts.flex-center();
+        gap: 28px;
+    }
+
+    &__item {
+        flex-shrink: 0;
+        @include abstracts.flex-center();
+        gap: 6px;
+        transition: translate 2s;
+        animation: scroll-infinity 5s infinite;
+    }
+
+    &__link {
+        color: abstracts.$textColorWhite;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.5;
+    }
+}
+
+.home-features {
+    background: abstracts.$yellowColor;
+    &__item {
+        align-items: center;
+        padding: 38px 20px;
+        border-radius: 6px;
+        background: abstracts.$whiteColor;
+
+        &-title {
+            margin-top: 26px;
+        }
+
+        &-desc {
+            margin-top: 16px;
+            text-align: center;
+        }
+    }
+}
+
+.home-blog {
+    &__item-media {
+        flex: initial;
+    }
+
+    &__item-desc {
+        margin-top: 26px;
+        font-size: 1.8rem;
+        line-height: 1.67;
+    }
+
+    &__item-link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: auto;
+        padding-top: 60px;
+        color: abstracts.$textColorDark;
+        font-size: 1.8rem;
+        line-height: 1.67;
+        font-weight: 600;
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 6px;
+
+        > img {
+            margin-top: 4px;
+        }
+    }
+}
+
+.home-newletter {
+    background: abstracts.$greenColor1;
+
+    &__inner {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        grid-row-gap: 30px;
+        grid-column-gap: 30;
+
+        @include abstracts.screen(md) {
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 40px;
+        }
+
+        @include abstracts.screen(xl) {
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 130px;
+        }
+    }
+
+    &__heading {
+        color: abstracts.$textColorWhite;
+
+        @include abstracts.screen(sm) {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        @include abstracts.screen(lg) {
+            margin: initial;
+            text-align: left;
+        }
+    }
+
+    &__media {
+        > img {
+            width: 100%;
+        }
+    }
+}

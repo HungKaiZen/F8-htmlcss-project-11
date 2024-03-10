@@ -1,0 +1,11 @@
+@use "../abstracts";
+.rating {
+    @include abstracts.flex-center();
+    gap: 4px;
+
+    > span {
+        color: abstracts.$textLightColor;
+        font-size: 1.6rem;
+        line-height: 1.62;
+    }
+}

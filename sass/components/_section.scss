@@ -1,0 +1,218 @@
+@use "../abstracts";
+.section {
+    margin-top: 20px;
+    padding: 30px 0;
+
+    @include abstracts.screen(sm) {
+        margin-top: 40px;
+        padding: 40px 0;
+    }
+
+    @include abstracts.screen(xl) {
+        margin-top: 40px;
+        padding: 60px 0;
+    }
+
+    &__content {
+        margin-top: 36px;
+
+        @include abstracts.screen(lg) {
+            margin-top: 70px;
+        }
+    }
+
+    &__row {
+        @include abstracts.flex-center();
+        justify-content: space-between;
+    }
+
+    &__category {
+        width: 98%;
+        margin: 0 auto;
+        padding: 10px;
+
+        @include abstracts.screen(sm) {
+            width: auto;
+            margin: initial;
+            padding: 0;
+        }
+    }
+
+    &__top {
+        @include abstracts.flex-center();
+        justify-content: space-between;
+    }
+
+    &__heading {
+        max-width: 470px;
+        font-size: 3rem;
+        line-height: 1.34;
+
+        @include abstracts.screen(lg) {
+            font-size: 4.2rem;
+            line-height: 1.24;
+        }
+    }
+
+    &__title {
+        color: abstracts.$textColorDark;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.5;
+        text-align: center;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+    }
+
+    &__desc {
+        max-width: 470px;
+        color: abstracts.$textColorDark;
+        margin-top: 18px;
+        font-size: 1.8rem;
+        line-height: 1.67;
+
+        @include abstracts.screen(lg) {
+            font-size: 2rem;
+        }
+    }
+
+    &__date {
+        color: abstracts.$textGreenColor;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.43;
+    }
+
+    &__item-link {
+        color: abstracts.$textColorDark;
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-decoration-line: underline;
+        text-transform: uppercase;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        border-radius: 15px;
+
+        &:hover &-media--hover {
+            border: 1px solid abstracts.$greenColor1;
+            @include abstracts.screen(sm) {
+                margin: -10px;
+                padding: 10px;
+            }
+        }
+
+        &--bg {
+            background: #ffe1a0;
+        }
+
+        &--middle {
+            @include abstracts.flex-center();
+            justify-content: center;
+        }
+
+        &-media {
+            flex: 1;
+            position: relative;
+            border: 1px solid transparent;
+        }
+
+        &-media-thumb {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        &-thumb--brand {
+            width: 150px;
+        }
+
+        &-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+        }
+
+        &-desc {
+            color: abstracts.$textLightColor;
+            font-size: 1.4rem;
+            line-height: 1.55;
+        }
+
+        &-card {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            padding: 6px 10px;
+            line-height: 1.7;
+            color: abstracts.$textColorWhite;
+            background: abstracts.$darkColor;
+
+            &--middle {
+                top: 50%;
+                left: 0;
+                translate: 0 -50%;
+                width: 100%;
+                padding: 15px;
+                text-align: center;
+                color: abstracts.$textColorWhite;
+                background: abstracts.$textOrangeColor;
+            }
+        }
+
+        &-btn {
+            margin-top: auto;
+        }
+    }
+
+    &__item-wrap-thumb {
+        @include abstracts.flex-center();
+        justify-content: center;
+        height: 100%;
+        min-height: 210px;
+        padding: 30px 10px;
+        border-radius: 15px;
+        background: abstracts.$yellowLighterColor;
+    }
+
+    &__price {
+        color: abstracts.$textColorDark;
+        font-size: 1.6rem;
+        line-height: 1.62;
+        font-weight: 600;
+
+        &--sell {
+            color: abstracts.$textOrangeColor;
+        }
+
+        &--old {
+            margin-right: 8px;
+            color: abstracts.$textLightColor;
+            font-size: 1.6rem;
+            font-weight: 400;
+            text-decoration: line-through;
+        }
+    }
+
+    &__scroll {
+        position: relative;
+        height: 4px;
+        margin-top: 55px;
+        background: abstracts.$yellowLighterColor;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: calc(100% / 3 - 15px);
+            height: inherit;
+            background: abstracts.$darkColor;
+        }
+    }
+}

@@ -1,0 +1,132 @@
+@use "../abstracts";
+.footer {
+    background: abstracts.$darkColor;
+    &__top {
+        @include abstracts.flex-center();
+        flex-direction: column;
+        padding: 55px 0;
+    }
+
+    &__title {
+        color: abstracts.$textColorWhite;
+        font-size: 2rem;
+        line-height: 1.5;
+        font-weight: 700;
+    }
+
+    &__stars {
+        @include abstracts.flex-center();
+        gap: 4px;
+        margin-top: 16px;
+    }
+
+    &__desc {
+        margin-top: 12px;
+        color: abstracts.$textColorWhite;
+        font-size: 1.8rem;
+        line-height: 1.67;
+    }
+
+    &__trustpilot {
+        @include abstracts.flex-center();
+        gap: 4px;
+        margin-top: 12px;
+        color: abstracts.$textColorWhite;
+        font-size: 1.8rem;
+        line-height: 1.5;
+        font-weight: 700;
+    }
+
+    &__separate {
+        height: 1px;
+        background: abstracts.$darkGrayColor;
+    }
+
+    &__body {
+        padding: 55px 0 100px;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 30px;
+
+        @include abstracts.screen(md) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @include abstracts.screen(xl) {
+            grid-template-columns: repeat(5, 1fr);
+        }
+    }
+
+    &__list {
+        margin-top: 24px;
+    }
+
+    &__item {
+        &:first-child > a {
+            padding-top: 0;
+        }
+
+        &:last-child > a {
+            padding-bottom: 0;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 8px 0;
+        color: abstracts.$textLighterColor2;
+        font-size: 1.6rem;
+        line-height: 1.625;
+    }
+
+    &__bottom {
+        padding: 36px 0;
+        background: abstracts.$yellowLighterColor;
+
+        &-row {
+            @include abstracts.flex-center();
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+    }
+}
+
+.social {
+    margin-top: 24px;
+    &__list {
+        @include abstracts.flex-center();
+        gap: 12px;
+    }
+
+    &__item {
+        @include abstracts.flex-center();
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 4px;
+        background: abstracts.$darkGrayColor;
+
+        &:hover {
+            background: abstracts.$greenColor2;
+        }
+    }
+}
+
+.copyright {
+    color: abstracts.$textColorDark;
+    font-size: 1.5rem;
+    line-height: 1.6;
+
+    @include abstracts.screen(sm) {
+        font-size: 1.6rem;
+    }
+}
+
+.payment__list {
+    @include abstracts.flex-center();
+    gap: 16px;
+}

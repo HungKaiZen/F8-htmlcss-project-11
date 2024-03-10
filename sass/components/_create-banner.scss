@@ -1,0 +1,112 @@
+@use "../abstracts";
+.create-banner {
+    position: relative;
+    padding: 25px;
+    border-radius: 8px;
+    background: abstracts.$pinkColor;
+
+    @include abstracts.screen(md) {
+        padding: 44px;
+    }
+
+    &__content {
+        width: 68%;
+
+        @include abstracts.screen(md) {
+            width: 80%;
+        }
+    }
+
+    &__header {
+        @include abstracts.flex-center();
+        justify-content: space-between;
+        padding: 12px 18px;
+        border-radius: 8px 8px 0 0;
+        background: abstracts.$greenColor1;
+
+        @include abstracts.screen(md) {
+            padding: 23px 30px;
+        }
+    }
+
+    &__icon {
+        position: relative;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+
+        @include abstracts.screen(md) {
+            width: 24px;
+            height: 24px;
+        }
+
+        > img {
+            position: absolute;
+        }
+
+        > img:first-child {
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        > img:last-child {
+            bottom: -10px;
+            left: 5px;
+            width: 12px;
+
+            @include abstracts.screen(md) {
+                width: 18px;
+                bottom: -14px;
+                left: 6px;
+            }
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+        background: abstracts.$whiteColor;
+
+        @include abstracts.screen(lg) {
+            padding: 26px 30px;
+        }
+
+        > img {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        font-size: 1.2rem;
+        line-height: 1.7;
+        color: abstracts.$textColorWhite;
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__cta-img {
+        position: absolute;
+        top: 50%;
+        right: 25px;
+        translate: 0 -50%;
+        width: 56%;
+    }
+
+    &__decor {
+        position: absolute;
+        &:first-child {
+            top: 44px;
+            right: 25px;
+        }
+
+        &:last-child {
+            bottom: 44px;
+            right: 25px;
+        }
+    }
+}
